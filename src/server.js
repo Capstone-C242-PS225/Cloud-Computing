@@ -1,7 +1,5 @@
-/* eslint-disable no-undef */
-// src/server.js
 const Hapi = require('@hapi/hapi');
-const routes = require('./routes/books');
+const routes = require('./routes/routing');
 
 const init = async () => {
   const server = Hapi.server({
@@ -15,10 +13,5 @@ const init = async () => {
   await server.start();
   console.log(`Server berjalan pada ${server.info.uri}`);
 };
-
-process.on('unhandledRejection', (err) => {
-  console.log(err);
-  process.exit(1);
-});
 
 init();
