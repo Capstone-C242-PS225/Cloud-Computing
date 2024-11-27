@@ -4,6 +4,16 @@ This is a backend core of app called FREE
 # Base URL
 
 # Endpoint
+**Authentication**
+- Register
+```http
+  POST /regist
+```
+| Body       | Type    |
+|------------|---------|
+| email      | string  |
+| username   | string  |
+| password   | string  |
 
 # How to Use
 
