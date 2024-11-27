@@ -9,11 +9,23 @@ This is a backend core of app called FREE
 ```http
   POST /regist
 ```
-| Body       | Type    |
-|------------|---------|
-| email      | string  |
-| username   | string  |
-| password   | string  |
+
+| Body       | Type      |
+|:---------- | :-------- |
+| `username` | `string`  |
+| `email`    | `string`  |
+| `password` | `string`  |
+
+- Login
+
+```http
+  POST /login
+```
+
+| Body       | Type     |
+| :--------- | :------- |
+| `email`    | `string` |
+| `password` | `string` |
 
 # How to Use
 
