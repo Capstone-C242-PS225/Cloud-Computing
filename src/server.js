@@ -3,10 +3,10 @@ const userRoutes = require('./routes/routing');
 
 const init = async () => {
   const server = Hapi.server({
-    port: 3000,
+    port: 9000,
     host: 'localhost',
   });
-  
+
   server.route(userRoutes);
 
   await server.start();
