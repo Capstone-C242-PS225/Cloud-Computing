@@ -1,4 +1,4 @@
-const { registerUser, loginUser } = require('../controllers/controller');
+const { registerUser, loginUser, dataUser, updateProfileImage } = require('../controllers/controller');
 
 const userRoutes = [
   {
@@ -10,6 +10,16 @@ const userRoutes = [
     method: 'POST',
     path: '/login',
     handler: loginUser,
+  },
+  {
+    method: 'GET',
+    path: '/users',
+    handler: dataUser,
+  },
+  {
+    method: 'PUT',
+    path: '/profile/image',
+    handler: updateProfileImage,
   },
 ];
 
