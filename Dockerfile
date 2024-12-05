@@ -13,4 +13,4 @@ WORKDIR /usr/src/app
 COPY --from=build /usr/src/app /usr/src/app
 
 EXPOSE 9000
-CMD ["server.js"]
+CMD ["node", "server.js"]
