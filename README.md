@@ -1,32 +1,33 @@
 # Cloud-Computing
 This is a backend core of app called FREE
-
-# Base URL
+note: the validator api
 
 # Endpoint
-
-# How to Use
-
+```bash
+POST \askPredict
+```
 # Directory Structure
 > Directory plan structure
 ```bash
 src
 │
 ├── controllers
-│   └── // controller
+│   └── controller.js
 │
-├── database
-│   ├── // migrate or somethins
-│   └── // or json-base database
+├── exceptions
+│   ├── clientError.js
+│   └── inputError.js
 │
 ├── routes
-│   └── // routing
+│   └── routing.js
 │
-├── tests
-│   ├── *.postman_collection.json
-│   └── *Bookshelf API Test*.postman_environment.json
+├── services
+│   ├── getPredict.js
+│   └── storeData.js
 │
-└── server.js // jika pakai server.js (biasanya index)
+├── credential-example.json
+│
+└── server.js 
 .eslintrc.json
 eslint.config.mjs
 package-lock.json
