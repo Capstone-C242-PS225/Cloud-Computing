@@ -2,7 +2,7 @@
   "name": "cloud-computing",
   "version": "1.0.0",
   "description": "This is a backend core of app called FREE",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
     "start-dev": "nodemon /src/server.js",
@@ -22,8 +22,12 @@
   "dependencies": {
     "@hapi/hapi": "^21.3.12",
     "@hapi/joi": "^17.1.1",
+    "axios": "^1.7.9",
     "bcrypt": "^5.1.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
     "firebase-admin": "^13.0.1",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.11.5",
     "nanoid": "^5.0.8",
     "uuid": "^11.0.3"

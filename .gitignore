@@ -130,4 +130,11 @@ dist
 .pnp.*
 
 # Service Account Key
-src/JSON/serviceaccountkey.json"src/JSON/serviceaccountkey.json" 
+src/JSON/*
+
+# Database
+.firebase.js
+
+# Etc.
+package-lock.json
+dockerignore
