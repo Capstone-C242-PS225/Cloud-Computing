@@ -128,3 +128,13 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Service Account Key
+src/JSON/*
+
+# Database
+.firebase.js
+
+# Etc.
+package-lock.json
+dockerignore
