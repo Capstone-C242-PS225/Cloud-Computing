@@ -6,6 +6,8 @@ Welcome to our FREE - Financial Resilience and Education for Ex-gamblers! This A
 MASIH_RAHASIA.com
 ```
 
+## Application Architecture
+![Arsitektur Aplikasi](https://raw.githubusercontent.com/Capstone-C242-PS225/.github/main/assets/archApp.png
 ## Endpoints
 
 #### Home
@@ -28,7 +30,7 @@ MASIH_RAHASIA.com
 | `username`      | `string` |
 | `password`      | `string` |
 
-Response: A user registration details or error message.
+Response: Sebuah user registration details atau error message.
 
 - Login
 
@@ -41,7 +43,7 @@ Response: A user registration details or error message.
 | `username`      | `string` |
 | `password`      | `string` |
 
-Response: A login details or login failed details or error message.
+Response: Sebuah login details atau login failed details atau error message.
 
 
 ### Specific User Data
@@ -65,7 +67,7 @@ Response: A login details or login failed details or error message.
 | :-------- | :------- |
 | `urlJudol`      | `string` |
 
-Message: Link was reported
+Message: Link was reported.
 
 - Online Gambler Predictions
 ```http
@@ -79,13 +81,13 @@ Message: Link was reported
 | `company_total_cashout`   | `number` |
 | `user_total_balance`      | `number` |
 
-Message: Model is predicted successfully
+Message: Model is predicted successfully.
 
 - Get Material Data
 ```http
   GET /getMateri
 ```
-Message: All material data has been obtained
+Message: All material data has been obtained.
 
 # Directory Structure
 
