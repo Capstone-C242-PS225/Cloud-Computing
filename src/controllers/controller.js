@@ -1,5 +1,5 @@
 const predictGamble = require("../services/getPredict");
-const askAdvice = require("../services/getAdvice");
+const { getAdv, getAll } = require("../services/getAdvice");
 const { storeData, storeLink } = require("../services/storeData");
 const { randomUUID } = require("crypto");
 
@@ -49,7 +49,7 @@ const askPredict = async (request, h) => {
       dataInput
     );
 
-    const advice = await askAdvice(predicted_addiction);
+    const advice = await getAdv(predicted_addiction);
     
     const id = randomUUID();
     const createdAt = new Date().toISOString();
@@ -117,6 +117,27 @@ const reportLink = async (request, h) =>{
   }
 }
 
+const getMateri = async (request, h) => {
+  try {
+    const dataMateri = await getAll();
+    const response = h.response({
+      error: false,
+      message: "All material data has been obtained",
+      data: dataMateri
+    });
+    response.code(201);
+    return response;
+  } catch(error) {
+    return h
+      .response({
+        status: "error",
+        message: "Failed to get the data.",
+        error: error.message,
+      })
+      .code(500);
+  }
+}
+
 module.exports = {
-  askPredict, reportLink
+  askPredict, reportLink, getMateri
 };

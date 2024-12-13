@@ -1,5 +1,5 @@
 const authController = require('../controllers/authController');
-const { askPredict, reportLink } = require("../controllers/controller");
+const { askPredict, reportLink, getMateri } = require("../controllers/controller");
   
 
 const routes = [
@@ -39,6 +39,11 @@ const routes = [
         method: "POST", 
         path: "/askPredict", 
         handler: askPredict 
+    },
+    {
+        method: "GET", 
+        path: "/getMateri", 
+        handler: getMateri
     },
 ];
 

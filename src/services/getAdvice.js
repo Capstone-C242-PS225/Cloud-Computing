@@ -42,4 +42,21 @@ async function getAdv(addict) {
     }
 }
 
-module.exports = getAdv;
+async function getAll() {
+  try {
+    const db = new Firestore({
+      projectId: process.env.projectId,
+      keyFilename: pathKey,
+    });
+    const data = await db.collection(collectionName).get();
+    const materiList = [];
+    data.forEach((doc) => {
+      materiList.push({ id: doc.id, ...doc.data() });
+    });
+    return materiList;
+  } catch(error) {
+      throw error;
+}
+}
+
+module.exports = { getAdv, getAll };

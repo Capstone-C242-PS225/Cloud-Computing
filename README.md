@@ -1,35 +1,119 @@
-# Cloud-Computing
-This is a backend core of app called FREE
+# FREE API Documentation
+Welcome to our FREE - Financial Resilience and Education for Ex-gamblers! This API allows you to manage accounts, predict levels of online gambling addiction, report online gambling links.
 
-# Base URL
+## Base URL
+```bash
+MASIH_RAHASIA.com
+```
 
-# Endpoint
+## Endpoints
 
-# How to Use
+#### Home
+
+```http
+  GET/
+    Response: { status: "success", message: "Welcome to our FREE - Financial Resilience and Education for Ex-gamblers!" }
+```
+
+#### Authentication
+- Signup
+
+```http
+  POST /register
+```
+
+| Body | Type     |
+| :-------- | :------- |
+| `email`      | `string` |
+| `username`      | `string` |
+| `password`      | `string` |
+
+Response: A user registration details or error message.
+
+- Login
+
+```http
+  POST /login
+```
+
+| Body | Type     |
+| :-------- | :------- |
+| `username`      | `string` |
+| `password`      | `string` |
+
+Response: A login details or login failed details or error message.
+
+
+### Specific User Data
+- getUser
+
+```http
+  POST /getUser
+```
+
+| Body | Type     |
+| :-------- | :------- |
+| `email`      | `string` |
+
+#### Feature
+- Report Link
+
+```http
+  PUT /user/report
+```
+| Body | Type     |
+| :-------- | :------- |
+| `urlJudol`      | `string` |
+
+Message: Link was reported
+
+- Online Gambler Predictions
+```http
+  POST /askPredict
+```
+| Body | Type     |
+| :-------- | :------- |
+| `newRegister`             | `number` |
+| `transaction_amount`      | `number` |
+| `user_total_cashout`      | `number` |
+| `company_total_cashout`   | `number` |
+| `user_total_balance`      | `number` |
+
+Message: Model is predicted successfully
+
+- Get Material Data
+```http
+  GET /getMateri
+```
+Message: All material data has been obtained
 
 # Directory Structure
-> Directory plan structure
+
 ```bash
 src
 │
 ├── controllers
-│   └── // controller
+│   ├── // controller
+│   └── // authController
 │
-├── database
-│   ├── // migrate or somethins
-│   └── // or json-base database
+├── config
+│   └── // firebase
+│
+├── exceptions
+│   ├── // clientError
+│   └── // inputError
+│
+├── JSON
+│   ├── // INI-PENTING
+│   └── // INI-PENTING-BRO
 │
 ├── routes
-│   └── // routing
+│   └── // apiRoutes
 │
-├── tests
-│   ├── *.postman_collection.json
-│   └── *Bookshelf API Test*.postman_environment.json
+├── services
+│   ├── // getAdvice
+│   ├── // getPredict
+│   └── // storeData
 │
-└── server.js // jika pakai server.js (biasanya index)
-.eslintrc.json
-eslint.config.mjs
-package-lock.json
-package.json
-README.md
+└── server
 ```
