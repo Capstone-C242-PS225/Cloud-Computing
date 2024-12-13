@@ -7,7 +7,7 @@ MASIH_RAHASIA.com
 ```
 
 ## Application Architecture
-![Arsitektur Aplikasi](https://raw.githubusercontent.com/Capstone-C242-PS225/.github/main/assets/archApp.png
+![Arsitektur Aplikasi](https://raw.githubusercontent.com/Capstone-C242-PS225/.github/main/assets/archApp.png)
 ## Endpoints
 
 #### Home
